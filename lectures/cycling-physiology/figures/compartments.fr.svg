@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+  <title id="title">Compartiments mitochondriaux dans une fibre</title>
+  <desc id="desc">Une fibre avec des mitochondries sous-sarcolemmiques et intermyofibrillaires, et une coupe des quatre compartiments.</desc>
+  <rect width="980" height="560" rx="18" fill="#f7f4ee" />
+  <text x="36" y="42" fill="#1e2930" font-family="Palatino, Georgia, serif" font-size="26">Où siège la mitochondrie, et ce qu'elle contient</text>
+  <text x="36" y="68" fill="#5c6b73" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">La membrane externe est un tamis. La membrane interne est le joint.</text>
+
+  
+  <g>
+    <text x="48" y="112" fill="#1e2930" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Dans la fibre</text>
+    <rect x="40" y="128" width="420" height="320" rx="28" fill="#efe6d6" stroke="#1e2930" stroke-width="3" />
+    <text x="250" y="156" text-anchor="middle" fill="#5c6b73" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13">sarcolemme</text>
+    
+    <g fill="#d9cbb6" stroke="#b7a58c">
+      <rect x="78" y="180" width="70" height="230" rx="8" />
+      <rect x="164" y="180" width="70" height="230" rx="8" />
+      <rect x="250" y="180" width="70" height="230" rx="8" />
+      <rect x="336" y="180" width="70" height="230" rx="8" />
+    </g>
+    <g fill="#8a7560" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+      <text x="113" y="340" text-anchor="middle">myofibrille</text>
+      <text x="199" y="340" text-anchor="middle">myofibrille</text>
+      <text x="285" y="340" text-anchor="middle">myofibrille</text>
+      <text x="371" y="340" text-anchor="middle">myofibrille</text>
+    </g>
+    
+    <g fill="#1f6f6a">
+      <ellipse cx="156" cy="250" rx="14" ry="22" />
+      <ellipse cx="156" cy="380" rx="14" ry="22" />
+      <ellipse cx="242" cy="300" rx="14" ry="22" />
+      <ellipse cx="242" cy="370" rx="14" ry="22" />
+      <ellipse cx="328" cy="230" rx="14" ry="22" />
+      <ellipse cx="328" cy="400" rx="14" ry="22" />
+    </g>
+    
+    <g fill="#0f766e">
+      <ellipse cx="70" cy="230" rx="16" ry="26" />
+      <ellipse cx="70" cy="310" rx="16" ry="26" />
+      <ellipse cx="70" cy="400" rx="16" ry="26" />
+      <ellipse cx="430" cy="250" rx="16" ry="26" />
+      <ellipse cx="430" cy="360" rx="16" ry="26" />
+    </g>
+  </g>
+
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#1e2930">
+    <rect x="48" y="478" width="14" height="14" rx="3" fill="#0f766e" />
+    <text x="68" y="490">sous-sarcolemmique, sous la membrane</text>
+    <rect x="48" y="504" width="14" height="14" rx="3" fill="#1f6f6a" />
+    <text x="68" y="516">intermyofibrillaire, entre les protéines contractiles</text>
+  </g>
+
+  
+  <g>
+    <text x="520" y="112" fill="#1e2930" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Coupe</text>
+    <ellipse cx="730" cy="330" rx="200" ry="160" fill="#d7ebe7" stroke="#164e4a" stroke-width="10" />
+    <text x="730" y="152" text-anchor="middle" fill="#164e4a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13">membrane externe</text>
+    <ellipse cx="730" cy="330" rx="168" ry="128" fill="#fffdf8" stroke="#1f6f6a" stroke-width="4" />
+    
+    <g fill="none" stroke="#1f6f6a" stroke-width="3">
+      <path d="M610 300 C650 250 690 250 730 300 C770 350 810 350 850 300" />
+      <path d="M615 340 C655 290 695 290 735 340 C775 390 815 390 845 340" />
+      <path d="M620 380 C660 330 700 330 740 380 C780 430 820 420 840 380" />
+      <path d="M640 250 C680 220 720 240 760 270" />
+    </g>
+    <text x="730" y="330" text-anchor="middle" fill="#1e2930" font-family="Palatino, Georgia, serif" font-size="20">matrice</text>
+    <text x="730" y="352" text-anchor="middle" fill="#5c6b73" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">TCA, bêta-oxydation, PDH</text>
+    <text x="660" y="400" fill="#1f6f6a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">membrane interne</text>
+    <text x="730" y="198" text-anchor="middle" fill="#164e4a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">espace intermembranaire</text>
+    <text x="820" y="270" fill="#164e4a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">crête</text>
+  </g>
+</svg>

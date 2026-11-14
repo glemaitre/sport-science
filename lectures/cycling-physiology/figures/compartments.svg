@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+  <title id="title">Mitochondrial compartments inside a muscle fibre</title>
+  <desc id="desc">A muscle fibre with subsarcolemmal and intermyofibrillar mitochondria, and a cutaway of the four mitochondrial compartments.</desc>
+  <rect width="980" height="560" rx="18" fill="#f7f4ee"/>
+  <text x="36" y="42" fill="#1e2930" font-family="Palatino, Georgia, serif" font-size="26">Where the mitochondrion sits, and what is inside it</text>
+  <text x="36" y="68" fill="#5c6b73" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">The outer membrane is a sieve. The inner membrane is the seal.</text>
+
+  <!-- Fibre -->
+  <g>
+    <text x="48" y="112" fill="#1e2930" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">In the fibre</text>
+    <rect x="40" y="128" width="420" height="320" rx="28" fill="#efe6d6" stroke="#1e2930" stroke-width="3"/>
+    <text x="250" y="156" text-anchor="middle" fill="#5c6b73" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13">sarcolemma</text>
+    <!-- myofibrils -->
+    <g fill="#d9cbb6" stroke="#b7a58c">
+      <rect x="78" y="180" width="70" height="230" rx="8"/>
+      <rect x="164" y="180" width="70" height="230" rx="8"/>
+      <rect x="250" y="180" width="70" height="230" rx="8"/>
+      <rect x="336" y="180" width="70" height="230" rx="8"/>
+    </g>
+    <g fill="#8a7560" font-family="ui-sans-serif, system-ui, sans-serif" font-size="11">
+      <text x="113" y="340" text-anchor="middle">myofibril</text>
+      <text x="199" y="340" text-anchor="middle">myofibril</text>
+      <text x="285" y="340" text-anchor="middle">myofibril</text>
+      <text x="371" y="340" text-anchor="middle">myofibril</text>
+    </g>
+    <!-- IMF mitochondria -->
+    <g fill="#1f6f6a">
+      <ellipse cx="156" cy="250" rx="14" ry="22"/>
+      <ellipse cx="156" cy="380" rx="14" ry="22"/>
+      <ellipse cx="242" cy="300" rx="14" ry="22"/>
+      <ellipse cx="242" cy="370" rx="14" ry="22"/>
+      <ellipse cx="328" cy="230" rx="14" ry="22"/>
+      <ellipse cx="328" cy="400" rx="14" ry="22"/>
+    </g>
+    <!-- SS mitochondria -->
+    <g fill="#0f766e">
+      <ellipse cx="70" cy="230" rx="16" ry="26"/>
+      <ellipse cx="70" cy="310" rx="16" ry="26"/>
+      <ellipse cx="70" cy="400" rx="16" ry="26"/>
+      <ellipse cx="430" cy="250" rx="16" ry="26"/>
+      <ellipse cx="430" cy="360" rx="16" ry="26"/>
+    </g>
+  </g>
+
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#1e2930">
+    <rect x="48" y="478" width="14" height="14" rx="3" fill="#0f766e"/>
+    <text x="68" y="490">subsarcolemmal, under the membrane</text>
+    <rect x="48" y="504" width="14" height="14" rx="3" fill="#1f6f6a"/>
+    <text x="68" y="516">intermyofibrillar, between the contractile proteins</text>
+  </g>
+
+  <!-- Cutaway -->
+  <g>
+    <text x="520" y="112" fill="#1e2930" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700">Cutaway</text>
+    <ellipse cx="730" cy="330" rx="200" ry="160" fill="#d7ebe7" stroke="#164e4a" stroke-width="10"/>
+    <text x="730" y="152" text-anchor="middle" fill="#164e4a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13">outer membrane</text>
+    <ellipse cx="730" cy="330" rx="168" ry="128" fill="#fffdf8" stroke="#1f6f6a" stroke-width="4"/>
+    <!-- cristae -->
+    <g fill="none" stroke="#1f6f6a" stroke-width="3">
+      <path d="M610 300 C650 250 690 250 730 300 C770 350 810 350 850 300"/>
+      <path d="M615 340 C655 290 695 290 735 340 C775 390 815 390 845 340"/>
+      <path d="M620 380 C660 330 700 330 740 380 C780 430 820 420 840 380"/>
+      <path d="M640 250 C680 220 720 240 760 270"/>
+    </g>
+    <text x="730" y="330" text-anchor="middle" fill="#1e2930" font-family="Palatino, Georgia, serif" font-size="20">matrix</text>
+    <text x="730" y="352" text-anchor="middle" fill="#5c6b73" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">TCA, beta-oxidation, PDH</text>
+    <text x="660" y="400" fill="#1f6f6a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">inner membrane</text>
+    <text x="730" y="198" text-anchor="middle" fill="#164e4a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">intermembrane space</text>
+    <text x="820" y="270" fill="#164e4a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">crista</text>
+  </g>
+</svg>

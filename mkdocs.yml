@@ -1,0 +1,99 @@
+site_name: Sport science notes
+site_description: Lecture notes on cycling physiology.
+site_url: https://glemaitre.github.io/sport-science/
+repo_url: https://github.com/glemaitre/sport-science
+docs_dir: lectures
+site_dir: site
+use_directory_urls: false
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.path
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: deep-orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: deep-orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    logo: material/bike
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mermaid.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Home: index.md
+  - Cycling physiology:
+      - How a cyclist makes energy: cycling-physiology/01-energy-systems.md
+      - Inside the mitochondrion: cycling-physiology/02-mitochondria.md
+
+extra:
+  generator: false
+
+copyright: Lecture notes for coming back to later. Figures are original schematics.
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: fr
+          name: Français
+          build: true
+          site_name: Notes de science du sport
+          site_description: Notes de cours sur la physiologie du cyclisme.
+          copyright: Notes de cours à reprendre plus tard. Les figures sont des schémas originaux.
+          theme:
+            language: fr
+          nav_translations:
+            Home: Accueil
+            Cycling physiology: Physiologie du cyclisme
+            How a cyclist makes energy: Comment un cycliste produit l'énergie
+            Inside the mitochondrion: Dans la mitochondrie

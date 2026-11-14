@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 540" role="img" aria-labelledby="title desc">
+  <title id="title">The mitochondrial proton circuit</title>
+  <desc id="desc">Electrons from NADH and FADH2 pass along the respiratory chain to oxygen. Complexes I, III and IV pump protons out of the matrix. Protons return through ATP synthase.</desc>
+  <rect width="980" height="540" rx="18" fill="#f7f4ee"/>
+  <text x="36" y="42" fill="#1e2930" font-family="Palatino, Georgia, serif" font-size="26">The proton circuit</text>
+  <text x="36" y="68" fill="#5c6b73" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14">Oxygen is the electron bin. The protons are what make ATP.</text>
+
+  <!-- compartments -->
+  <rect x="28" y="96" width="924" height="130" fill="#e5f2f0"/>
+  <rect x="28" y="310" width="924" height="200" fill="#fffdf8"/>
+  <rect x="28" y="226" width="924" height="84" fill="#1f6f6a"/>
+  <text x="44" y="124" fill="#164e4a" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="700">crista lumen / intermembrane space</text>
+  <text x="44" y="490" fill="#8a7560" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="700">matrix</text>
+
+  <!-- proton arrows up -->
+  <g fill="#c2410c" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" font-weight="700">
+    <path d="M118 210 V150" stroke="#c2410c" stroke-width="3" fill="none"/>
+    <polygon points="118,140 112,154 124,154"/>
+    <text x="128" y="168">H+</text>
+    <path d="M430 210 V150" stroke="#c2410c" stroke-width="3" fill="none"/>
+    <polygon points="430,140 424,154 436,154"/>
+    <text x="440" y="168">H+</text>
+    <path d="M640 210 V150" stroke="#c2410c" stroke-width="3" fill="none"/>
+    <polygon points="640,140 634,154 646,154"/>
+    <text x="650" y="168">H+</text>
+  </g>
+
+  <!-- complexes -->
+  <g font-family="ui-sans-serif, system-ui, sans-serif" text-anchor="middle">
+    <rect x="70" y="196" width="96" height="120" rx="10" fill="#0f766e"/>
+    <text x="118" y="252" fill="#f7f4ee" font-size="16" font-weight="700">I</text>
+    <text x="118" y="340" fill="#1e2930" font-size="12">NADH</text>
+    <text x="118" y="356" fill="#5c6b73" font-size="11">pumps ~4 H+</text>
+
+    <rect x="200" y="214" width="80" height="90" rx="10" fill="#3d7a74"/>
+    <text x="240" y="264" fill="#f7f4ee" font-size="16" font-weight="700">II</text>
+    <text x="240" y="340" fill="#1e2930" font-size="12">FADH2</text>
+    <text x="240" y="356" fill="#5c6b73" font-size="11">pumps none</text>
+
+    <circle cx="330" cy="268" r="22" fill="#b45309"/>
+    <text x="330" y="273" fill="#fffdf8" font-size="14" font-weight="700">Q</text>
+
+    <rect x="380" y="196" width="96" height="120" rx="10" fill="#0f766e"/>
+    <text x="428" y="252" fill="#f7f4ee" font-size="16" font-weight="700">III</text>
+    <text x="428" y="340" fill="#1e2930" font-size="12">Q cycle</text>
+    <text x="428" y="356" fill="#5c6b73" font-size="11">pumps ~4 H+</text>
+
+    <circle cx="520" cy="250" r="18" fill="#7c3aed"/>
+    <text x="520" y="246" fill="#fffdf8" font-size="11" font-weight="700">cyt</text>
+    <text x="520" y="258" fill="#fffdf8" font-size="11" font-weight="700">c</text>
+
+    <rect x="570" y="196" width="110" height="120" rx="10" fill="#0f766e"/>
+    <text x="625" y="246" fill="#f7f4ee" font-size="16" font-weight="700">IV</text>
+    <text x="625" y="268" fill="#d7ebe7" font-size="12">O2  to  H2O</text>
+    <text x="625" y="340" fill="#1e2930" font-size="12">electrons end</text>
+    <text x="625" y="356" fill="#5c6b73" font-size="11">pumps ~2 H+</text>
+
+    <!-- ATP synthase -->
+    <rect x="790" y="248" width="28" height="50" rx="4" fill="#c2410c"/>
+    <ellipse cx="804" cy="360" rx="46" ry="28" fill="#c2410c"/>
+    <text x="804" y="356" fill="#fffdf8" font-size="13" font-weight="700">ATP</text>
+    <text x="804" y="372" fill="#fffdf8" font-size="12">synthase</text>
+    <path d="M804 240 V168" stroke="#c2410c" stroke-width="3" fill="none"/>
+    <polygon points="804,230 798,214 810,214"/>
+    <text x="804" y="156" fill="#c2410c" font-size="13" font-weight="700">H+ in</text>
+    <text x="804" y="420" fill="#1e2930" font-size="13">ADP + Pi  to  ATP</text>
+  </g>
+
+  <!-- electron path -->
+  <path d="M166 250 H200 M280 268 H308 M352 268 H380 M476 250 H502 M538 250 H570" stroke="#1d4ed8" stroke-width="2.5" fill="none"/>
+  <text x="330" y="210" text-anchor="middle" fill="#1d4ed8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12">electrons</text>
+
+  <text x="36" y="524" fill="#5c6b73" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13">Per pair of electrons: NADH moves about ten protons out, because it starts at I. FADH2 starts at II and moves about six.</text>
+</svg>
