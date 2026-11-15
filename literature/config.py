@@ -8,7 +8,7 @@ PACKAGE = Path(__file__).resolve().parent
 DB_PATH = PACKAGE / "data" / "literature.sqlite"
 WEB_DIR = PACKAGE / "web"
 PAPERS_JS = WEB_DIR / "papers.js"
-LECTURE_BRIEF = PACKAGE / "lecture_brief.md"
+INTEREST_BRIEF = PACKAGE / "interest_brief.md"
 
 
 @dataclass(frozen=True)

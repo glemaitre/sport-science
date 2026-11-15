@@ -4,22 +4,23 @@ import time
 
 import httpx
 
-from literature.config import LECTURE_BRIEF, Config
+from literature.config import INTEREST_BRIEF, Config
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 KINDS = {"cycling", "endurance", "physiology"}
-LECTURES = {"energy-systems", "mitochondria", "not-yet"}
 ABSTRACT_LIMIT = 1500
 
-SCREEN_SYSTEM = """You screen new sports-science papers for a reader learning cycling and endurance physiology.
+SCREEN_SYSTEM = """You screen new papers for a data scientist at a professional cycling team.
 
-Keep a paper when its finding is useful for cycling or for a similar continuous endurance sport: running, trail running, rowing, swimming, triathlon, cross-country skiing, race walking. The physiology that counts is lactate, mitochondria, VO2max, glycogen, thresholds, fuel use, and muscle energetics.
+Keep a paper when it helps the team understand, analyse, interpret, or improve cycling performance. That includes physiology, nutrition, biomechanics, aerodynamics, and neighbouring work on training, recovery, heat, altitude, pacing, monitoring, and testing.
 
-Drop surgery technique, sport management, match analysis, and rehab protocols that do not teach one of those mechanisms. Drop intermittent team sports unless the finding is about one of those mechanisms.
+Physiology, including fuel use, is not limited to cycling. Keep a finding from running, trail running, rowing, swimming, triathlon, cross-country skiing, or race walking when the mechanism would transfer to the bike. Biomechanics and aerodynamics count when the task is cycling, or when the method applies directly to the bike. Do not keep a running-gait or team-sport movement paper only because the athletes are fit.
 
-Score relevance from 0 to 10. 0 is unrelated. 10 is a paper this reader would learn from directly. 6 is the keep cutoff.
+Drop surgery technique, sport management, match analysis, talent identification, coaching pedagogy, and rehab protocols that do not teach a performance mechanism. Drop intermittent team sports unless the finding is a mechanism that would transfer.
 
-kind is cycling when the subjects or the task are cycling, endurance when they do another continuous endurance sport, and physiology when the paper is about a mechanism and names no sport. Use an empty kind when the paper is unrelated.
+Score relevance from 0 to 10. 0 is unrelated. 10 is a paper the team would use directly. 6 is the keep cutoff.
+
+kind is cycling when the subjects or the task are cycling, endurance when they do another continuous endurance sport, and physiology when the paper is about a mechanism and names no sport. Nutrition, biomechanics, and aerodynamics of cycling are kind cycling. Use an empty kind when the paper is unrelated.
 sport is the sport studied, or an empty string when there is no sport.
 why is one sentence on why the paper is here, or why it was dropped. Do not copy the abstract.
 
@@ -27,13 +28,11 @@ Return JSON only, as {"papers": [{"id", "score", "keep", "kind", "sport", "why"}
 
 
 def note_system(brief: str) -> str:
-    return f"""You write a short learning note for one reader. Plain language. Define a term the first time you use it. Do not invent a number that is not in the abstract. Do not copy the abstract. Name the sport the subjects actually did. Say what would transfer to cycling.
-
-lecture is energy-systems, mitochondria, or not-yet. Use the brief below. Do not invent a lecture.
+    return f"""You write a short note for a data scientist at a professional cycling team. Plain language. Do not invent a number that is not in the abstract. Do not copy the abstract. Name the sport the subjects actually did. Say what the team could use, and what would transfer to the bike when the subjects were not cyclists.
 
 learn is two or three sentences.
 
-Return JSON only, as {{"papers": [{{"id", "learn", "lecture"}}]}}. Use the ids you were given.
+Return JSON only, as {{"papers": [{{"id", "learn"}}]}}. Use the ids you were given.
 
 Interest profile:
 {brief}"""
@@ -99,11 +98,6 @@ def clean_kind(value) -> str:
     return kind if kind in KINDS else ""
 
 
-def clean_lecture(value) -> str:
-    lecture = str(value or "").strip().lower()
-    return lecture if lecture in LECTURES else "not-yet"
-
-
 def clean_sport(value) -> str:
     sport = re.sub(r"\s+", " ", str(value or "")).strip()
     if sport.lower() in {"", "none", "n/a", "na"}:
@@ -134,7 +128,7 @@ def note_records(payload) -> dict[str, dict]:
         learn = re.sub(r"\s+", " ", str(item.get("learn") or "")).strip()
         if not paper_id or not learn:
             continue
-        records[paper_id] = {"learn": learn, "lecture": clean_lecture(item.get("lecture"))}
+        records[paper_id] = {"learn": learn}
     return records
 
 
@@ -201,7 +195,7 @@ def screen_papers(client: httpx.Client, key: str, config: Config, rows) -> dict[
 
 
 def write_notes(client: httpx.Client, key: str, config: Config, rows) -> dict[str, dict]:
-    brief = LECTURE_BRIEF.read_text(encoding="utf-8")
+    brief = INTEREST_BRIEF.read_text(encoding="utf-8")
     papers = []
     for row in rows:
         item = paper_for_model(row, limit=2000)

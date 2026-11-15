@@ -22,7 +22,6 @@ def paper_payload(row: sqlite3.Row) -> dict:
         "sport": row["sport"] or "",
         "why": row["why"] or "",
         "learn": row["learn"] or "",
-        "lecture": row["lecture"] or "",
         "abstract_missing": bool(row["abstract_missing"]),
         "run_id": row["run_id"],
     }

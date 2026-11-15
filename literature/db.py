@@ -30,7 +30,6 @@ CREATE TABLE IF NOT EXISTS papers (
     sport TEXT,
     why TEXT,
     learn TEXT,
-    lecture TEXT,
     model TEXT,
     classified_at TEXT,
     run_id INTEGER
@@ -249,13 +248,12 @@ def save_note(
         connection.execute(
             """
             UPDATE papers
-            SET learn = ?, lecture = ?, model = ?, classified_at = ?, run_id = ?,
+            SET learn = ?, model = ?, classified_at = ?, run_id = ?,
                 keep = 1
             WHERE openalex_id = ? AND classified_at IS NULL
             """,
             (
                 result.get("learn") or "",
-                result.get("lecture") or "not-yet",
                 model,
                 utc_now(),
                 run_id,

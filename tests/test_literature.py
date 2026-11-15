@@ -165,7 +165,7 @@ class DatabaseTests(unittest.TestCase):
         self.assertEqual(papers[0]["score"], 4)
         self.assertEqual(papers[0]["published_on"], "2026-11-01")
         self.assertEqual(papers[0]["run_id"], 7)
-        self.assertEqual(papers[0]["lecture"], "")
+        self.assertNotIn("lecture", papers[0])
         self.assertNotIn("abstract", papers[0])
 
 
@@ -178,12 +178,11 @@ class PageAndWatermarkTests(unittest.TestCase):
                     "score": 9,
                     "published_on": "2026-11-02",
                     "run_id": 3,
-                    "lecture": "mitochondria",
                 }
             ],
             3,
         )
-        self.assertIn('"lecture": "mitochondria"', text)
+        self.assertIn('"id": "W9"', text)
         self.assertTrue(text.endswith("window.LATEST_RUN_ID = 3;\n"))
 
     def test_watermark_stays_when_papers_remain(self):

@@ -17,7 +17,7 @@ How to write a lecture, and the physiology later notes must stay consistent with
 
 ## Literature
 
-`literature/` watches Q1 and Q2 Sports Science journals and builds the page at `literature/index.html`. It is not a lecture. Do not add it to `nav`. The record is `literature/data/literature.sqlite`. `pixi run literature-journals` refreshes the journal list. `pixi run literature` classifies new papers and rewrites `literature/web/papers.js`. The model is `literature/config.toml`. The key is `OPENROUTER_API_KEY` in `.env`. The daily job is `.github/workflows/literature.yml`. Saved papers and already-seen marks stay in the browser.
+How the literature job works, and the decisions a later change must stay consistent with, is in [literature/AGENTS.md](literature/AGENTS.md). It is not a lecture. Do not add it to `nav`. `docs_dir` is `lectures/`, so that file is not on the site.
 
 ## Figures
 

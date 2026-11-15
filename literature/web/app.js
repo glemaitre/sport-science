@@ -1,18 +1,6 @@
 const SAVED_KEY = "literature.saved";
 const SEEN_KEY = "literature.seen";
 
-const LECTURES = {
-  "energy-systems": {
-    label: "Energy systems",
-    href: "../cycling-physiology/01-energy-systems.html",
-  },
-  mitochondria: {
-    label: "Mitochondria",
-    href: "../cycling-physiology/02-mitochondria.html",
-  },
-  "not-yet": { label: "Not in the notes yet", href: "" },
-};
-
 const KINDS = {
   cycling: "Cycling",
   endurance: "Endurance",
@@ -105,7 +93,6 @@ function matches(paper) {
   const kind = document.getElementById("kind").value;
   const sport = document.getElementById("sport").value;
   const journal = document.getElementById("journal").value;
-  const lecture = document.getElementById("lecture").value;
   const from = document.getElementById("from").value;
   const to = document.getElementById("to").value;
   const minimum = Number(document.getElementById("score").value);
@@ -113,7 +100,6 @@ function matches(paper) {
   if (kind && paper.kind !== kind) return false;
   if (sport && paper.sport !== sport) return false;
   if (journal && paper.journal !== journal) return false;
-  if (lecture && paper.lecture !== lecture) return false;
   if (document.getElementById("latest").checked && paper.run_id !== latestRunId) return false;
   if (document.getElementById("saved-only").checked && !saved.has(paper.id)) return false;
   if (document.getElementById("hide-seen").checked && seen.has(paper.id)) return false;
@@ -172,21 +158,6 @@ function renderCard(paper) {
     learn.append(element("h3", "", "What you could learn"));
     learn.append(element("p", "learn", paper.learn));
     card.append(learn);
-  }
-
-  const lecture = LECTURES[paper.lecture];
-  if (lecture && lecture.href) {
-    const link = element("a", "", lecture.label);
-    link.href = lecture.href;
-    const where = element("section", "section");
-    where.append(element("h3", "", "Where it sits"));
-    where.append(link);
-    card.append(where);
-  } else if (paper.lecture === "not-yet") {
-    const where = element("section", "section");
-    where.append(element("h3", "", "Where it sits"));
-    where.append(element("p", "", "Not in the notes yet."));
-    card.append(where);
   }
 
   const actions = element("div", "actions");
