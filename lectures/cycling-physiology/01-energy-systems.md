@@ -10,11 +10,49 @@ The short version is that muscle never stores much of the molecule it actually s
 
 ## 1. ATP is the currency, and the wallet is almost empty
 
-Every contraction spends adenosine triphosphate (ATP). The myosin head uses it to produce force. The sodium–potassium pump uses it to restore the membrane after each action potential. The calcium pump (SERCA) uses it to put calcium back into the sarcoplasmic reticulum so the fibre can relax. Ion pumping is a large fraction of the bill, on the order of 20–40% of the ATP used in a contraction; the cross-bridges take most of the rest.
+Every contraction spends adenosine triphosphate (ATP). Myosin is the motor protein in the thick filaments of the muscle fibre. Parts of it, the myosin heads, stick out and grab the thin filaments, which are made of actin. The head uses ATP to pull on the filament and produce force. The sodium–potassium pump uses it to restore the membrane after each action potential. The calcium pump (SERCA) uses it to put calcium back into the sarcoplasmic reticulum so the fibre can relax. Ion pumping is a large fraction of the bill, on the order of 20–40% of the ATP used in a contraction; the cross-bridges take most of the rest.
 
 ![Where a contraction spends ATP: the sodium-potassium pump, SERCA, and the myosin cross-bridge cycle](figures/atp-use.svg)
 
-<p class="figure-caption">The three ATPases of one contraction, and the cycle that spends the myosin ATP. The sodium–potassium pump moves 3 Na+ out and 2 K+ in per ATP. SERCA returns 2 Ca2+ to the sarcoplasmic reticulum per ATP. Each myosin head uses one ATP to let go of actin, recock, and pull again. Calcium decides whether a pull is allowed; ATP decides whether the head can let go. The two pumps together are about 20–40% of the ATP. The cross-bridges take the rest.</p>
+<p class="figure-caption">The three ATPases of one contraction, and the cycle that spends the myosin ATP. The sodium–potassium pump moves 3 Na+ out and 2 K+ in per ATP. SERCA returns 2 Ca2+ to the sarcoplasmic reticulum per ATP. Each myosin head uses one ATP to let go of actin, reset, and pull again. Calcium decides whether a pull is allowed; ATP decides whether the head can let go. The two pumps together are about 20–40% of the ATP. The cross-bridges take the rest.</p>
+
+The film shows the same spending. It opens on one myosin head and one ATP per pull.
+
+<video controls playsinline preload="metadata" src="movies/how-a-muscle-spends-atp.mp4">
+<a href="movies/how-a-muscle-spends-atp.mp4">How a muscle spends ATP</a>
+</video>
+
+<p class="figure-caption"><a href="movies/how-a-muscle-spends-atp.mp4">How a muscle spends ATP</a>. Calcium decides whether a head may pull. A new ATP is what lets the head let go of actin.</p>
+
+### Cross-bridges and ion pumps
+
+The figure is the whole bill for one contraction. A gradient, in these notes, means a difference between two sides of a membrane: more of one ion on one side than on the other. Ions then move by themselves from the crowded side toward the side where they are scarce. That movement costs no ATP. ATP is spent doing the opposite. The pumps push the ions back to the crowded side, and each myosin head is reset so it can pull again.
+
+Three events start the twitch, and none of them splits ATP.
+
+- Sodium is more crowded outside the fibre than inside, and potassium is more crowded inside than outside. Sodium therefore enters, and potassium leaves, each toward the side where it is scarce. That traffic is the action potential, the electrical signal that starts the contraction.
+- The signal runs along the T-tubule, a narrow tube of the outer membrane that reaches into the fibre. A protein there senses the voltage and opens the ryanodine receptor, the calcium door of the sarcoplasmic reticulum. Calcium is packed inside that store and scarce in the rest of the fibre, so it rushes out when the door opens.
+- Calcium binds troponin. Tropomyosin, the protein that covers the binding sites on actin, then moves aside, and a myosin head is allowed to hold actin.
+
+ATP is spent on the way back.
+
+**The cross-bridge.** One ATP per cycle of one head.
+
+1. ATP binds, and the head lets go of actin. With no ATP the bridge stays shut. That stuck state is rigor.
+2. The ATP splits into ADP and inorganic phosphate. The head swings into a tensed position, like a drawn spring. The energy of the split is now stored in that tensed head.
+3. If calcium has uncovered the site, the head binds actin, phosphate leaves, and the head pulls. That pull is the power stroke. It spends the energy stored when the head tensed.
+4. ADP leaves. The head stays on actin until another ATP arrives and step 1 can happen again.
+
+The short sentence "the myosin head uses ATP to produce force" is this cycle seen from the outside. Splitting ATP tenses the head. A new ATP is what lets the head release actin and reset. Calcium decides whether step 3 is allowed. For as long as calcium and ATP are both there, every attached head repeats the cycle, which is why the cross-bridges take most of the ATP.
+
+**The ion pumps.** They put the ions back on the crowded side. That rebuilds the difference the twitch just used up, so the fibre can fire again and can relax.
+
+- The sodium–potassium pump moves 3 Na+ out and 2 K+ in per ATP. That restores the membrane after the action potential.
+- SERCA moves 2 Ca2+ back into the sarcoplasmic reticulum per ATP. Cytosolic calcium falls, tropomyosin covers the binding sites, and the fibre relaxes.
+
+Together the two pumps are about 20–40% of the ATP used in a contraction. That share moves with how often the fibre fires, because every action potential and every calcium release has to be undone. These notes do not split the 20–40% further into a sodium share and a calcium share. The cross-bridges take what the pumps do not.
+
+All three enzymes run the same reaction, written next. The proton on the right-hand side is part of why a very hard effort acidifies the fibre. That side of the story is taken up with lactate in section 4.
 
 The reaction is:
 
@@ -22,7 +60,7 @@ The reaction is:
 ATP + H2O → ADP + Pi + H+ + energy
 ```
 
-Resting muscle holds only about 5–8 mmol of ATP per kilogram of wet muscle. That is not an energy reserve. It is a concentration the cell tries to defend, because the free energy released by splitting ATP depends on keeping ATP high and ADP low. Even in all-out exercise, muscle ATP usually falls by only 1–2 mmol/kg. If it falls much further, force collapses.
+Resting muscle holds only about 5–8 mmol of ATP per kilogram of wet muscle. That is not an energy reserve. It is a concentration the cell tries to defend, because the useful energy from splitting one ATP is larger when ATP stays high and ADP stays low. Even in all-out exercise, muscle ATP usually falls by only 1–2 mmol/kg. If it falls much further, force collapses.
 
 Hargreaves and Spriet put numbers on how fast that small pool would vanish if nothing replaced it:
 
@@ -116,7 +154,7 @@ A second, much smaller reaction is the myokinase (adenylate kinase) reaction:
 2 ADP → ATP + AMP
 ```
 
-AMP is a loud signal. It helps turn on glycogen breakdown and the committed step of glycolysis (phosphofructokinase). If AMP rises further, AMP deaminase converts it to IMP and ammonia. That reaction does not make ATP. It keeps the energy charge of the cell from collapsing when ATP starts to fall.
+AMP, adenosine monophosphate, is a loud signal. It helps turn on glycogen breakdown and the committed step of glycolysis (phosphofructokinase). If AMP rises further, AMP deaminase converts it to IMP, inosine monophosphate, and ammonia. That reaction does not make ATP. It keeps the energy charge of the cell from collapsing when ATP starts to fall.
 
 ### How fast, and for how long
 
@@ -151,7 +189,7 @@ On the bike, a rider who stays above threshold between efforts is using the mito
 
 ### It is not only a sprint fuel
 
-During steady riding, mitochondria make ATP and mitochondrial creatine kinase uses that ATP to recharge creatine. Creatine and phosphocreatine diffuse faster than ADP and ATP because they are smaller, and their concentrations can build a steeper gradient. The phosphocreatine shuttle is how high-energy phosphate moves from mitochondria to the myofibrils during aerobic work. Phosphocreatine is both the emergency buffer and the delivery system.
+During steady riding, mitochondria make ATP and mitochondrial creatine kinase uses that ATP to recharge creatine. Creatine and phosphocreatine are smaller than ADP and ATP, so they spread through the fibre faster. The muscle can also keep a large difference in their concentration between the mitochondria and the myofibrils, and molecules spread faster when that difference is large. That difference is a concentration gradient. The phosphocreatine shuttle is how the energy-rich phosphate travels from the mitochondria to the myofibrils during aerobic work. Phosphocreatine is both the emergency buffer and the delivery system.
 
 ---
 
@@ -199,7 +237,7 @@ The yield per glucosyl unit is small, so a high ATP rate eats glycogen quickly a
 
 ## 5. Oxidative phosphorylation: the engine of almost every ride that matters
 
-Mitochondria finish the job. Pyruvate (from carbohydrate) or acetyl-CoA from beta-oxidation (from fat) enters the tricarboxylic acid cycle. NADH and FADH2 carry electrons to the respiratory chain. Oxygen is the final acceptor. The proton gradient drives ATP synthase.
+Mitochondria finish the job. Pyruvate (from carbohydrate) or acetyl-CoA from beta-oxidation (from fat) enters the tricarboxylic acid cycle. NADH and FADH2 carry electrons to the respiratory chain. Oxygen is the final acceptor. As the electrons move, the chain pushes protons (H+) onto one side of the inner membrane, so that side becomes more crowded with protons, and more positively charged, than the other. Protons then flow back from the crowded side through ATP synthase, and that flow makes ATP. The difference they flow across, in concentration and in charge, is the proton gradient.
 
 ```text
 carbohydrate or fat + O2  →  CO2 + H2O + a lot of ATP
@@ -272,6 +310,8 @@ Within one hard effort the shares also move. In 90 seconds of all-out cycling, t
 
 On a second 30-second sprint, after a few minutes of recovery, the aerobic share is larger again (around 40% in one well-known study) because anaerobic ATP resynthesis has not fully recovered and oxygen uptake is already elevated. Repeated jumps become an aerobic problem even though each jump feels anaerobic.
 
+The map is about production: how the fibre remakes ATP. Carbohydrate and fat feed glycolysis and the mitochondria, and three routes remake ATP. The last two boxes only show where that ATP goes, at the cross-bridges and the ion pumps. The four drawings under it take one transformation at a time. The first three make ATP, and each names its enzyme or pathway and writes the equation. The last one is the reaction that spends it. The yields are the same orders of magnitude as in section 2.
+
 ```mermaid
 flowchart TB
     CHO[Glycogen and glucose] --> GLY[Glycolysis]
@@ -286,6 +326,37 @@ flowchart TB
     MITO --> ATP
     ATP --> BR[Cross-bridges]
     ATP --> PU[Ion pumps]
+```
+
+Phosphocreatine holds a phosphate that creatine kinase hands straight to ADP. This is the fastest resynthesis, and the proton on the left is why the same reaction also buffers a hard effort.
+
+```mermaid
+flowchart LR
+    IN["PCr + ADP + H+"] -->|"creatine kinase"| OUT["ATP + creatine"]
+```
+
+When pyruvate is not all taken into the mitochondria, glycolysis runs through to lactate. A glycogen unit yields about 3 ATP. Blood glucose yields about 2, because hexokinase spends one ATP to trap it in the fibre. The third line is lactate dehydrogenase, the step that regenerates NAD+ so glycolysis can continue.
+
+```mermaid
+flowchart TB
+    G["glycogen unit"] -->|"glycolysis, product is lactate"| L1["2 lactate and about 3 ATP"]
+    GLU["blood glucose"] -->|"same pathway, hexokinase spends 1 ATP"| L2["2 lactate and about 2 ATP"]
+    PYR["pyruvate + NADH + H+"] -->|"lactate dehydrogenase"| LAC["lactate + NAD+"]
+```
+
+Given enough oxygen and enough time, the same fuels are oxidized completely. Glucose yields about 30 to 36 ATP. Palmitate, a typical fatty acid, yields about 100 to 130, after beta-oxidation has cut it into pieces that enter the same mitochondrial chain. That chain is the subject of the next lecture.
+
+```mermaid
+flowchart TB
+    CHO["glucose + O2"] -->|"oxidative phosphorylation"| P1["CO2 + H2O and about 30 to 36 ATP"]
+    FAT["palmitate + O2"] -->|"beta-oxidation, then the same chain"| P2["CO2 + H2O and about 100 to 130 ATP"]
+```
+
+Whichever pathway made the ATP, the fibre spends it the same way. Myosin ATPase and the two ion pumps hydrolyze it. What those consumers do with the energy is the principle in section 1.
+
+```mermaid
+flowchart LR
+    ATP["ATP + H2O"] -->|"myosin ATPase and the ion pumps"| OUT["ADP + Pi + H+ and energy"]
 ```
 
 ---

@@ -47,7 +47,7 @@ Un muscle non entraîné peut consacrer quelques pourcents du volume de la fibre
 Une mitochondrie, ce sont deux membranes et deux espaces d'eau.
 
 Membrane externe
-: Perméable aux petits métabolites par des canaux anioniques dépendants du voltage (VDAC, aussi appelés porines). L'ATP, le phosphate, le pyruvate et la créatine la traversent facilement. Ce n'est pas la barrière qui permet à l'organite de tenir un gradient de protons.
+: Perméable aux petits métabolites par des canaux anioniques dépendants du voltage (VDAC, aussi appelés porines). L'ATP, le phosphate, le pyruvate et la créatine la traversent facilement. Ce n'est pas la barrière qui permet à l'organite de garder plus de protons d'un côté d'une membrane que de l'autre. Cette différence, de concentration et de charge, est un gradient de protons, et seule la membrane interne peut la tenir.
 
 Espace intermembranaire
 : L'eau entre les deux membranes, en principe continue avec l'intérieur de chaque crête. Les protons pompés par la chaîne respiratoire s'accumulent ici. La créatine kinase mitochondriale siège ici, ce qui explique que ce mince espace compte pour le cyclisme et pas seulement pour la biochimie.
@@ -90,7 +90,7 @@ Pendant que les électrons avancent, les complexes I, III et IV pompent des prot
 
 <p class="figure-caption">Les électrons du NADH et du FADH2 vont jusqu'à l'oxygène. Seuls les complexes I, III et IV sortent des protons. L'ATP synthase laisse les protons rentrer et phosphoryle l'ADP. Le FADH2 saute le complexe I, donc il déplace moins de protons par oxygène utilisé au complexe IV.</p>
 
-Le gradient de protons, électrique et chimique ensemble, est la force proton-motrice. Les protons rentrent dans la matrice par l'ATP synthase. Le flux tourne un rotor. Le rotor entraîne la formation d'ATP à partir d'ADP et de phosphate. L'ATP synthase des mammifères a un anneau d'environ huit sous-unités c, donc un tour complet prend environ huit protons et produit trois ATP. C'est déjà environ 2,7 protons par ATP au niveau de l'enzyme elle-même. Faire entrer l'ATP dans le cytosol coûte plus. La translocase des nucléotides d'adénine échange l'ATP de la matrice contre l'ADP cytosolique, et le transporteur de phosphate fait entrer le phosphate avec un proton. L'ATP que la myofibrille peut vraiment utiliser coûte donc plus près de quatre protons.
+Les protons sont alors plus concentrés, et la charge plus positive, à l'extérieur de la matrice qu'à l'intérieur. Cette différence est le gradient de protons. Les deux parts ensemble, la concentration et la charge, s'appellent la force proton-motrice. Les protons rentrent dans la matrice par l'ATP synthase, du côté concentré vers le côté le moins concentré. Le flux tourne un rotor. Le rotor entraîne la formation d'ATP à partir d'ADP et de phosphate. L'ATP synthase des mammifères a un anneau d'environ huit sous-unités c, donc un tour complet prend environ huit protons et produit trois ATP. C'est déjà environ 2,7 protons par ATP au niveau de l'enzyme elle-même. Faire entrer l'ATP dans le cytosol coûte plus. La translocase des nucléotides d'adénine échange l'ATP de la matrice contre l'ADP cytosolique, et le transporteur de phosphate fait entrer le phosphate avec un proton. L'ATP que la myofibrille peut vraiment utiliser coûte donc plus près de quatre protons.
 
 Diviser les protons pompés par ce coût fait apparaître les non-entiers familiers.
 
@@ -114,6 +114,14 @@ L'acétyl-CoA est la monnaie commune. Les glucides et les lipides doivent tous d
 ![Le pyruvate et les acides gras entrent dans la matrice par des transporteurs différents et se retrouvent en acétyl-CoA](figures/fuel-doors.fr.svg)
 
 <p class="figure-caption">Le pyruvate traverse sur le transporteur mitochondrial du pyruvate et est décarboxylé par la pyruvate déshydrogénase. Le lipide à longue chaîne traverse comme acyl-carnitine. Les deux portes produisent de l'acétyl-CoA pour le cycle TCA. Une forte charge d'acétyl-CoA piège la carnitine et rétrécit la porte des lipides.</p>
+
+Le film est cette section en mouvement : où l'ATP est refait, dans la mitochondrie. Il s'ouvre sur les deux portes et le cycle qu'elles alimentent toutes les deux. Les textes à l'écran sont en anglais.
+
+<video controls playsinline preload="metadata" src="../../cycling-physiology/movies/where-the-atp-is-remade-the-mitochondrion.mp4">
+<a href="../../cycling-physiology/movies/where-the-atp-is-remade-the-mitochondrion.mp4">Where the ATP is remade: the mitochondrion</a>
+</video>
+
+<p class="figure-caption"><a href="../../cycling-physiology/movies/where-the-atp-is-remade-the-mitochondrion.mp4">Where the ATP is remade : la mitochondrie</a>. Le pyruvate, venu du glucose et du glycogène, et les acides gras, venus des stocks de lipides, entrent par des portes différentes et se retrouvent dans le cycle des acides tricarboxyliques.</p>
 
 ### La porte des glucides
 
@@ -194,7 +202,7 @@ Tous les protons ne rentrent pas par l'ATP synthase. Certains refluent à traver
 
 Le muscle squelettique exprime la protéine découplante 3. La part de la fuite ordinaire qu'elle porte pendant une sortie est encore discutée, et ces notes n'ont pas besoin d'un verdict. L'échange est le point. Une membrane plus étanche fait plus d'ATP par oxygène et peut faire plus d'espèces réactives de l'oxygène quand l'ADP manque. Une membrane plus fuyante gaspille de l'énergie en chaleur et peut baisser cette fuite d'électrons. Des athlètes d'endurance très entraînés, dans certaines comparaisons, montrent une fuite de protons plus basse par mitochondrie que des personnes entraînées de loisir, ce qui voudrait dire un couplage un peu plus étanche. C'est un petit terme à côté de tout le reste entre le glucose et la pédale.
 
-Le rendement brut du cyclisme, environ 20 à 25 %, n'est pas le rapport P/O mitochondrial. C'est tout le chemin. Du carburant au gradient de protons, de l'énergie est déjà perdue en chaleur. Du gradient de protons à l'ATP, on en perd encore, y compris la fuite. De l'ATP au travail du pont, on est bien en dessous de la moitié. Les pompes ioniques prennent 20 à 40 % de l'ATP. Les jambes doivent aussi se déplacer elles-mêmes, ainsi que le vélo à vide. Le couplage mitochondrial est un facteur de ce produit. L'améliorer un peu ne fait pas passer le rendement de 20 % à 30 %.
+Le rendement brut du cyclisme, environ 20 à 25 %, n'est pas le rapport P/O mitochondrial. C'est tout le chemin. Du carburant jusqu'à ce côté concentré de la membrane, de l'énergie est déjà perdue en chaleur. De cette différence de protons à l'ATP, on en perd encore, y compris la fuite. De l'ATP au travail du pont, on est bien en dessous de la moitié. Les pompes ioniques prennent 20 à 40 % de l'ATP. Les jambes doivent aussi se déplacer elles-mêmes, ainsi que le vélo à vide. Le couplage mitochondrial est un facteur de ce produit. L'améliorer un peu ne fait pas passer le rendement de 20 % à 30 %.
 
 ---
 

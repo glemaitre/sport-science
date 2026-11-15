@@ -3,3 +3,7 @@ site/
 __pycache__/
 *.pyc
 .DS_Store
+.env
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal

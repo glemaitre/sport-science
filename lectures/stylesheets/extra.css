@@ -17,12 +17,14 @@
   letter-spacing: -0.015em;
 }
 
-.md-typeset img {
+.md-typeset img,
+.md-typeset video {
   background: #f7f4ee;
   border: 1px solid #e4ddd0;
   border-radius: 12px;
   display: block;
   margin: 1.2rem auto 0.4rem;
+  max-width: 100%;
 }
 
 [data-md-color-scheme="slate"] .md-typeset img {

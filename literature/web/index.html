@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Literature</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="mast">
+    <p class="eyebrow">Sports science, Q1 and Q2</p>
+    <h1>Literature</h1>
+    <p class="lede">Papers that might teach something useful for cycling, or for a similar endurance sport.</p>
+    <a class="notes-link" href="../index.html">Back to the notes</a>
+  </header>
+  <div class="layout">
+    <form id="filters" class="filters">
+      <label>
+        Search
+        <input id="search" type="search" autocomplete="off" placeholder="Title, author, journal, idea">
+      </label>
+      <label>
+        Kind
+        <select id="kind">
+          <option value="">Any</option>
+          <option value="cycling">Cycling</option>
+          <option value="endurance">Endurance</option>
+          <option value="physiology">Physiology</option>
+        </select>
+      </label>
+      <label>
+        Sport
+        <select id="sport"></select>
+      </label>
+      <label>
+        Journal
+        <select id="journal"></select>
+      </label>
+      <label>
+        Lecture
+        <select id="lecture">
+          <option value="">Any</option>
+          <option value="energy-systems">Energy systems</option>
+          <option value="mitochondria">Mitochondria</option>
+          <option value="not-yet">Not in the notes yet</option>
+        </select>
+      </label>
+      <label class="check">
+        <input id="latest" type="checkbox">
+        Latest run
+      </label>
+      <label class="check">
+        <input id="saved-only" type="checkbox">
+        Saved only
+      </label>
+      <label class="check">
+        <input id="hide-seen" type="checkbox">
+        Hide already seen
+      </label>
+      <label>
+        <span>Minimum score <span id="score-value">6</span>/10</span>
+        <input id="score" type="range" min="0" max="10" step="1" value="6">
+      </label>
+      <label>
+        From
+        <input id="from" type="date">
+      </label>
+      <label>
+        To
+        <input id="to" type="date">
+      </label>
+      <label>
+        Sort
+        <select id="sort">
+          <option value="published_on">Publication date</option>
+          <option value="score">Score</option>
+          <option value="journal">Journal</option>
+          <option value="title">Title</option>
+        </select>
+      </label>
+      <button id="direction" type="button">Newest first</button>
+    </form>
+    <main>
+      <p id="count" class="count"></p>
+      <div id="list"></div>
+      <p id="empty" class="empty" hidden></p>
+    </main>
+  </div>
+  <script src="papers.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

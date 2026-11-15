@@ -10,11 +10,49 @@ En bref, le muscle ne stocke presque pas la molécule qu'il dépense. Il la refa
 
 ## 1. L'ATP est la monnaie, et le portefeuille est presque vide
 
-Chaque contraction dépense de l'adénosine triphosphate (ATP). La tête de myosine s'en sert pour produire la force. La pompe sodium-potassium s'en sert pour restaurer la membrane après chaque potentiel d'action. La pompe à calcium (SERCA) s'en sert pour remettre le calcium dans le réticulum sarcoplasmique, afin que la fibre puisse se relâcher. Les pompes ioniques représentent une large part de la facture, de l'ordre de 20 à 40 % de l'ATP d'une contraction. Les ponts d'actomyosine prennent l'essentiel du reste.
+Chaque contraction dépense de l'adénosine triphosphate (ATP). La myosine est la protéine motrice des filaments épais de la fibre musculaire. Certaines de ses parties, les têtes de myosine, dépassent et accrochent les filaments fins, faits d'actine. La tête s'en sert pour tirer sur le filament et produire la force. La pompe sodium-potassium s'en sert pour restaurer la membrane après chaque potentiel d'action. La pompe à calcium (SERCA) s'en sert pour remettre le calcium dans le réticulum sarcoplasmique, afin que la fibre puisse se relâcher. Les pompes ioniques représentent une large part de la facture, de l'ordre de 20 à 40 % de l'ATP d'une contraction. Les ponts d'actomyosine prennent l'essentiel du reste.
 
 ![Où une contraction dépense l'ATP : la pompe sodium-potassium, SERCA, et le cycle des ponts de myosine](figures/atp-use.fr.svg)
 
-<p class="figure-caption">Les trois ATPases d'une contraction, et le cycle qui dépense l'ATP de la myosine. La pompe sodium-potassium sort 3 Na+ et fait entrer 2 K+ par ATP. SERCA renvoie 2 Ca2+ dans le réticulum sarcoplasmique par ATP. Chaque tête de myosine utilise un ATP pour lâcher l'actine, se réarmer et tirer de nouveau. Le calcium décide si une traction est permise. L'ATP décide si la tête peut lâcher. Les deux pompes font ensemble environ 20 à 40 % de l'ATP. Les ponts prennent le reste.</p>
+<p class="figure-caption">Les trois ATPases d'une contraction, et le cycle qui dépense l'ATP de la myosine. La pompe sodium-potassium sort 3 Na+ et fait entrer 2 K+ par ATP. SERCA renvoie 2 Ca2+ dans le réticulum sarcoplasmique par ATP. Chaque tête de myosine utilise un ATP pour lâcher l'actine, se remettre en place et tirer de nouveau. Le calcium décide si une traction est permise. L'ATP décide si la tête peut lâcher. Les deux pompes font ensemble environ 20 à 40 % de l'ATP. Les ponts prennent le reste.</p>
+
+Le film montre la même dépense. Il s'ouvre sur une tête de myosine et un ATP par traction. Les textes à l'écran sont en anglais.
+
+<video controls playsinline preload="metadata" src="../../cycling-physiology/movies/how-a-muscle-spends-atp.mp4">
+<a href="../../cycling-physiology/movies/how-a-muscle-spends-atp.mp4">How a muscle spends ATP</a>
+</video>
+
+<p class="figure-caption"><a href="../../cycling-physiology/movies/how-a-muscle-spends-atp.mp4">How a muscle spends ATP</a>. Le calcium décide si une tête a le droit de tirer. Un nouvel ATP est ce qui permet à la tête de lâcher l'actine.</p>
+
+### Ponts d'actomyosine et pompes ioniques
+
+La figure est toute la facture d'une contraction. Un gradient, dans ces notes, veut dire une différence entre les deux côtés d'une membrane : plus d'un ion d'un côté que de l'autre. Les ions se déplacent alors tout seuls du côté où ils sont concentrés vers le côté où ils sont rares. Ce déplacement ne coûte pas d'ATP. L'ATP est dépensé pour faire l'inverse. Les pompes repoussent les ions vers le côté concentré, et chaque tête de myosine est remise en place pour pouvoir tirer de nouveau.
+
+Trois événements lancent la secousse, et aucun ne coupe l'ATP.
+
+- Le sodium est plus concentré à l'extérieur de la fibre qu'à l'intérieur, et le potassium est plus concentré à l'intérieur qu'à l'extérieur. Le sodium entre donc, et le potassium sort, chacun vers le côté où il est rare. Ce trafic est le potentiel d'action, le signal électrique qui lance la contraction.
+- Le signal court dans le tubule T, un fin tube de la membrane externe qui entre dans la fibre. Une protéine y sent le voltage et ouvre le récepteur à la ryanodine, la porte à calcium du réticulum sarcoplasmique. Le calcium est tassé dans ce stock et rare dans le reste de la fibre, donc il sort en masse quand la porte s'ouvre.
+- Le calcium se lie à la troponine. La tropomyosine, la protéine qui couvre les sites de liaison sur l'actine, se décale alors, et une tête de myosine a le droit de tenir l'actine.
+
+L'ATP est dépensé au retour.
+
+**Le pont.** Un ATP par cycle d'une tête.
+
+1. L'ATP se lie, et la tête lâche l'actine. Sans ATP, le pont reste fermé. Cet état bloqué est la rigidité.
+2. L'ATP se scinde en ADP et en phosphate inorganique. La tête se tend, comme un ressort que l'on bande. L'énergie de la coupure est alors stockée dans cette tête tendue.
+3. Si le calcium a découvert le site, la tête lie l'actine, le phosphate part, et la tête tire. Cette traction est le coup de force. Elle dépense l'énergie stockée quand la tête s'est tendue.
+4. L'ADP part. La tête reste sur l'actine jusqu'à ce qu'un autre ATP arrive et que l'étape 1 puisse recommencer.
+
+La phrase courte « la tête de myosine utilise l'ATP pour produire la force » est ce cycle vu de l'extérieur. Couper l'ATP tend la tête. Un nouvel ATP est ce qui permet à la tête de lâcher l'actine et de se remettre en place. Le calcium décide si l'étape 3 est permise. Tant que le calcium et l'ATP sont tous deux là, chaque tête attachée répète le cycle, ce qui explique que les ponts prennent la plus grande part de l'ATP.
+
+**Les pompes ioniques.** Elles remettent les ions du côté où ils étaient concentrés. Cela reconstruit la différence que la secousse vient d'utiliser, pour que la fibre puisse s'exciter de nouveau et se relâcher.
+
+- La pompe sodium-potassium sort 3 Na+ et fait entrer 2 K+ par ATP. Elle restaure la membrane après le potentiel d'action.
+- SERCA renvoie 2 Ca2+ dans le réticulum sarcoplasmique par ATP. Le calcium cytosolique baisse, la tropomyosine recouvre les sites de liaison, et la fibre se relâche.
+
+Les deux pompes font ensemble environ 20 à 40 % de l'ATP d'une contraction. Cette part bouge avec la fréquence à laquelle la fibre s'excite, parce que chaque potentiel d'action et chaque libération de calcium doivent être défaits. Ces notes ne partagent pas davantage les 20 à 40 % en une part sodium et une part calcium. Les ponts prennent ce que les pompes ne prennent pas.
+
+Les trois enzymes font la même réaction, écrite ensuite. Le proton du membre de droite explique en partie pourquoi un effort très dur acidifie la fibre. Ce versant est repris avec le lactate en section 4.
 
 La réaction est :
 
@@ -22,7 +60,7 @@ La réaction est :
 ATP + H2O → ADP + Pi + H+ + énergie
 ```
 
-Le muscle au repos ne tient qu'environ 5 à 8 mmol d'ATP par kilogramme de muscle frais. Ce n'est pas une réserve d'énergie. C'est une concentration que la cellule défend, parce que l'énergie libre libérée en coupant l'ATP dépend d'un ATP haut et d'un ADP bas. Même à fond, l'ATP musculaire ne baisse en général que de 1 à 2 mmol/kg. S'il baisse beaucoup plus, la force s'effondre.
+Le muscle au repos ne tient qu'environ 5 à 8 mmol d'ATP par kilogramme de muscle frais. Ce n'est pas une réserve d'énergie. C'est une concentration que la cellule défend, parce que l'énergie utile tirée de la coupure d'un ATP est plus grande quand l'ATP reste haut et l'ADP bas. Même à fond, l'ATP musculaire ne baisse en général que de 1 à 2 mmol/kg. S'il baisse beaucoup plus, la force s'effondre.
 
 Hargreaves et Spriet chiffrent la vitesse à laquelle ce petit pool disparaîtrait si rien ne le remplaçait :
 
@@ -151,7 +189,7 @@ Sur le vélo, un coureur qui reste au-dessus du seuil entre les efforts utilise 
 
 ### Ce n'est pas seulement un carburant de sprint
 
-En régime stable, les mitochondries font de l'ATP et la créatine kinase mitochondriale s'en sert pour recharger la créatine. La créatine et la phosphocréatine diffusent plus vite que l'ADP et l'ATP parce qu'elles sont plus petites, et leurs concentrations peuvent construire un gradient plus raide. La navette de la phosphocréatine est la façon dont le phosphate riche en énergie va des mitochondries aux myofibrilles pendant le travail aérobie. La phosphocréatine est à la fois le tampon d'urgence et le système de livraison.
+En régime stable, les mitochondries font de l'ATP et la créatine kinase mitochondriale s'en sert pour recharger la créatine. La créatine et la phosphocréatine sont plus petites que l'ADP et l'ATP, donc elles se répandent plus vite dans la fibre. Le muscle peut aussi maintenir une grande différence de leur concentration entre les mitochondries et les myofibrilles, et les molécules se répandent plus vite quand cette différence est grande. Cette différence est un gradient de concentration. La navette de la phosphocréatine est la façon dont le phosphate riche en énergie va des mitochondries aux myofibrilles pendant le travail aérobie. La phosphocréatine est à la fois le tampon d'urgence et le système de livraison.
 
 ---
 
@@ -199,7 +237,7 @@ Le rendement par unité glucosyle est petit, donc un fort débit d'ATP mange le 
 
 ## 5. Phosphorylation oxydative : le moteur de presque toutes les sorties qui comptent
 
-Les mitochondries finissent le travail. Le pyruvate (des glucides) ou l'acétyl-CoA de la bêta-oxydation (des lipides) entre dans le cycle des acides tricarboxyliques. Le NADH et le FADH2 portent les électrons jusqu'à la chaîne respiratoire. L'oxygène est l'accepteur final. Le gradient de protons entraîne l'ATP synthase.
+Les mitochondries finissent le travail. Le pyruvate (des glucides) ou l'acétyl-CoA de la bêta-oxydation (des lipides) entre dans le cycle des acides tricarboxyliques. Le NADH et le FADH2 portent les électrons jusqu'à la chaîne respiratoire. L'oxygène est l'accepteur final. Pendant que les électrons avancent, la chaîne pousse des protons (H+) d'un côté de la membrane interne, si bien que ce côté devient plus concentré en protons, et plus positif, que l'autre. Les protons refluent alors du côté concentré vers l'ATP synthase, et ce reflux fabrique l'ATP. La différence qu'ils traversent, de concentration et de charge, est le gradient de protons.
 
 ```text
 glucides ou lipides + O2  →  CO2 + H2O + beaucoup d'ATP
@@ -272,6 +310,8 @@ Dans un même effort dur, les parts bougent aussi. En 90 secondes de cyclisme à
 
 Sur un second sprint de 30 secondes, après quelques minutes de récupération, la part aérobie est de nouveau plus grande (environ 40 % dans une étude connue) parce que la resynthèse anaérobie d'ATP n'a pas entièrement récupéré et que la consommation d'oxygène est déjà élevée. Les relances répétées deviennent un problème aérobie même si chaque relance se sent anaérobie.
 
+La carte porte sur la production : comment la fibre refait l'ATP. Les glucides et les lipides alimentent la glycolyse et les mitochondries, et trois voies refont l'ATP. Les deux dernières cases montrent seulement où cet ATP va, vers les ponts d'actomyosine et les pompes ioniques. Les quatre dessins en dessous prennent une transformation à la fois. Les trois premiers font de l'ATP, et chacun nomme son enzyme ou sa voie et écrit l'équation. Le dernier est la réaction qui le dépense. Les rendements sont les mêmes ordres de grandeur qu'en section 2.
+
 ```mermaid
 flowchart TB
     CHO[Glycogène et glucose] --> GLY[Glycolyse]
@@ -286,6 +326,37 @@ flowchart TB
     MITO --> ATP
     ATP --> BR[Ponts d'actomyosine]
     ATP --> PU[Pompes ioniques]
+```
+
+La phosphocréatine porte un phosphate que la créatine kinase remet directement à l'ADP. C'est la resynthèse la plus rapide, et le proton à gauche explique que la même réaction tamponne aussi un effort dur.
+
+```mermaid
+flowchart LR
+    IN["PCr + ADP + H+"] -->|"créatine kinase"| OUT["ATP + créatine"]
+```
+
+Quand le pyruvate n'est pas entièrement pris par les mitochondries, la glycolyse va jusqu'au lactate. Une unité de glycogène donne environ 3 ATP. Le glucose sanguin en donne environ 2, parce que l'hexokinase dépense un ATP pour le piéger dans la fibre. La troisième ligne est la lactate déshydrogénase, l'étape qui régénère le NAD+ pour que la glycolyse puisse continuer.
+
+```mermaid
+flowchart TB
+    G["unité de glycogène"] -->|"glycolyse, produit lactate"| L1["2 lactate et environ 3 ATP"]
+    GLU["glucose sanguin"] -->|"même voie, l'hexokinase dépense 1 ATP"| L2["2 lactate et environ 2 ATP"]
+    PYR["pyruvate + NADH + H+"] -->|"lactate déshydrogénase"| LAC["lactate + NAD+"]
+```
+
+Avec assez d'oxygène et assez de temps, les mêmes carburants sont oxydés complètement. Le glucose donne environ 30 à 36 ATP. Le palmitate, un acide gras typique, en donne environ 100 à 130, une fois que la bêta-oxydation l'a découpé en morceaux qui entrent dans la même chaîne mitochondriale. Cette chaîne est le sujet de la note suivante.
+
+```mermaid
+flowchart TB
+    CHO["glucose + O2"] -->|"phosphorylation oxydative"| P1["CO2 + H2O et environ 30 à 36 ATP"]
+    FAT["palmitate + O2"] -->|"bêta-oxydation, puis la même chaîne"| P2["CO2 + H2O et environ 100 à 130 ATP"]
+```
+
+Quelle que soit la voie qui a fait l'ATP, la fibre le dépense de la même façon. L'ATPase de la myosine et les deux pompes ioniques l'hydrolysent. Ce que ces consommateurs font de l'énergie est le principe de la section 1.
+
+```mermaid
+flowchart LR
+    ATP["ATP + H2O"] -->|"ATPase de la myosine et pompes ioniques"| OUT["ADP + Pi + H+ et énergie"]
 ```
 
 ---

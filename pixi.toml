@@ -12,7 +12,11 @@ mkdocs-material = ">=9.8.1,<10"
 
 [pypi-dependencies]
 mkdocs-static-i18n = ">=1.3.0,<2"
+httpx = ">=0.27,<1"
+python-dotenv = ">=1.0,<2"
 
 [tasks]
 serve = { cmd = "mkdocs serve --dev-addr 127.0.0.1:8765", description = "Open the notes in a browser with live reload" }
 build = { cmd = "mkdocs build --strict", description = "Generate the static site into site/" }
+literature = { cmd = "python -m literature", description = "Fetch new papers and refresh the literature page" }
+literature-journals = { cmd = "python -m literature journals", description = "Refresh the Q1 and Q2 Sports Science journal list" }

@@ -47,7 +47,7 @@ Untrained muscle might devote a few percent of fibre volume to mitochondria. End
 A mitochondrion is two membranes and two water spaces.
 
 Outer membrane
-: Permeable to small metabolites through voltage-dependent anion channels (VDAC, also called porins). ATP, phosphate, pyruvate, and creatine cross it easily. It is not the barrier that lets the organelle hold a proton gradient.
+: Permeable to small metabolites through voltage-dependent anion channels (VDAC, also called porins). ATP, phosphate, pyruvate, and creatine cross it easily. It is not the barrier that lets the organelle keep more protons on one side of a membrane than on the other. That difference, in crowding and in charge, is a proton gradient, and only the inner membrane can hold it.
 
 Intermembrane space
 : The water between the two membranes, continuous in principle with the inside of each crista. Protons pumped by the respiratory chain accumulate here. Mitochondrial creatine kinase sits here, which is why this thin space matters for cycling and not only for biochemistry.
@@ -90,7 +90,7 @@ As the electrons move, complexes I, III, and IV pump protons out of the matrix. 
 
 <p class="figure-caption">Electrons from NADH and FADH2 run to oxygen. Only complexes I, III, and IV move protons out. ATP synthase lets protons back in and phosphorylates ADP. FADH2 skips complex I, so it moves fewer protons per oxygen used at complex IV.</p>
 
-The proton gradient, electrical and chemical together, is the proton-motive force. Protons re-enter the matrix through ATP synthase. The flow turns a rotor. The rotor drives the formation of ATP from ADP and phosphate. Mammalian ATP synthase has a ring of about eight c-subunits, so a full turn takes about eight protons and produces three ATP. That is already about 2.7 protons per ATP at the enzyme itself. Getting the ATP into the cytosol costs more. The adenine nucleotide translocase swaps matrix ATP for cytosolic ADP, and the phosphate carrier brings phosphate in together with a proton. The ATP the myofibril can actually use therefore costs closer to four protons.
+Protons are now more crowded, and the charge more positive, outside the matrix than inside it. That difference is the proton gradient. The two parts together, the crowding and the charge, are called the proton-motive force. Protons re-enter the matrix through ATP synthase, from the crowded side toward the emptier one. The flow turns a rotor. The rotor drives the formation of ATP from ADP and phosphate. Mammalian ATP synthase has a ring of about eight c-subunits, so a full turn takes about eight protons and produces three ATP. That is already about 2.7 protons per ATP at the enzyme itself. Getting the ATP into the cytosol costs more. The adenine nucleotide translocase swaps matrix ATP for cytosolic ADP, and the phosphate carrier brings phosphate in together with a proton. The ATP the myofibril can actually use therefore costs closer to four protons.
 
 Divide the protons pumped by that cost and the familiar non-integers appear.
 
@@ -114,6 +114,14 @@ Acetyl-CoA is the shared currency. Carbohydrate and fat both have to become acet
 ![Pyruvate and fatty acids entering the matrix by different carriers and meeting as acetyl-CoA](figures/fuel-doors.svg)
 
 <p class="figure-caption">Pyruvate crosses on the mitochondrial pyruvate carrier and is decarboxylated by pyruvate dehydrogenase. Long-chain fat crosses as acyl-carnitine. Both doors produce acetyl-CoA for the TCA cycle. A high acetyl-CoA load traps carnitine and narrows the fat door.</p>
+
+The film is this section in motion: where the ATP is remade, inside the mitochondrion. It opens on the two doors and the cycle they both feed.
+
+<video controls playsinline preload="metadata" src="movies/where-the-atp-is-remade-the-mitochondrion.mp4">
+<a href="movies/where-the-atp-is-remade-the-mitochondrion.mp4">Where the ATP is remade: the mitochondrion</a>
+</video>
+
+<p class="figure-caption"><a href="movies/where-the-atp-is-remade-the-mitochondrion.mp4">Where the ATP is remade: the mitochondrion</a>. Pyruvate from glucose and glycogen, and fatty acids from fat stores, enter by different doors and meet in the tricarboxylic acid cycle.</p>
 
 ### The carbohydrate door
 
@@ -194,7 +202,7 @@ Not every proton re-enters through ATP synthase. Some leak back across the inner
 
 Skeletal muscle expresses uncoupling protein 3. How much of ordinary leak it carries during a ride is still argued, and these notes do not need a verdict. The trade is the point. A tighter membrane makes more ATP per oxygen and can make more reactive oxygen species when ADP is scarce. A leakier membrane wastes energy as heat and can lower that electron leak. Very fit endurance athletes in some comparisons show lower proton leak per mitochondrion than recreationally trained people, which would mean a slightly tighter coupling. It is a small term next to everything else between glucose and the pedal.
 
-Cycling gross efficiency, about 20–25%, is not the mitochondrial P/O ratio. It is the whole path. Fuel to proton gradient already loses energy as heat. Proton gradient to ATP loses more, including leak. ATP to cross-bridge work is well below half. Ion pumps take 20–40% of the ATP. The legs also have to move themselves and the unloaded bike. Mitochondrial coupling is one factor in that product. Improving it a little does not move efficiency from 20% to 30%.
+Cycling gross efficiency, about 20–25%, is not the mitochondrial P/O ratio. It is the whole path. From the fuel to that crowded side of the membrane, energy is already lost as heat. From that proton difference to ATP, more is lost, including leak. ATP to cross-bridge work is well below half. Ion pumps take 20–40% of the ATP. The legs also have to move themselves and the unloaded bike. Mitochondrial coupling is one factor in that product. Improving it a little does not move efficiency from 20% to 30%.
 
 ---
 

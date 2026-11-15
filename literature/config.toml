@@ -1,0 +1,6 @@
+model = "~deepseek/deepseek-flash-latest"
+lookback_days = 7
+keep_threshold = 6
+max_papers = 200
+scimago_area = "3600"
+scimago_category = "3699"
