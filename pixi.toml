@@ -20,3 +20,5 @@ serve = { cmd = "mkdocs serve --dev-addr 127.0.0.1:8765", description = "Open th
 build = { cmd = "mkdocs build --strict", description = "Generate the static site into site/" }
 literature = { cmd = "python -m literature", description = "Fetch new papers and refresh the literature page" }
 literature-journals = { cmd = "python -m literature journals", description = "Refresh the Q1 and Q2 Sports Science journal list" }
+literature-backfill = { cmd = "python -m literature backfill", description = "Classify more waiting papers; add --papers N and --since DATE" }
+literature-app = { cmd = "python -m literature app", description = "Serve the literature page with triage and backfill at http://127.0.0.1:8766/" }

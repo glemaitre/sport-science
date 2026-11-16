@@ -8,6 +8,7 @@ OPENALEX_WORKS = "https://api.openalex.org/works"
 SELECT = "id,doi,title,publication_date,authorships,abstract_inverted_index,primary_location"
 PAGE_SIZE = 100
 ISSN_BATCH = 25
+NUMBERED_PAGE_LIMIT = 10000
 
 
 def reconstruct_abstract(inverted: dict | None) -> str:
@@ -96,8 +97,18 @@ def fetch_works(
     mailto: str,
     client: httpx.Client,
     fetch_cap: int,
+    to_date: str | None = None,
+    api_key: str = "",
 ) -> tuple[list[dict], bool]:
-    """Return normalized works and whether every page in the window was read."""
+    """Return normalized works and whether every page in the window was read.
+
+    Without to_date the window stays open, so issues dated ahead of today are included.
+    Cursor paging needs an OpenAlex key. Without one, numbered pages reach the first
+    10,000 results of a query, which a month of 25 journals stays well under.
+    """
+    date_filter = f"from_publication_date:{from_date},"
+    if to_date:
+        date_filter += f"to_publication_date:{to_date},"
     unique = list(dict.fromkeys(issns))
     works: list[dict] = []
     seen: set[str] = set()
@@ -105,25 +116,31 @@ def fetch_works(
     headers = {"User-Agent": f"sport-science-literature/0.1 ({mailto or 'local'})"}
     for batch in _chunks(unique, ISSN_BATCH):
         cursor = "*"
-        while cursor:
+        page = 1
+        while True:
             if len(works) >= fetch_cap:
                 return works, False
             params = {
                 "filter": (
                     f"primary_location.source.issn:{'|'.join(batch)},"
-                    f"from_publication_date:{from_date},"
+                    f"{date_filter}"
                     "type:article|review"
                 ),
                 "per-page": str(PAGE_SIZE),
-                "cursor": cursor,
                 "select": SELECT,
             }
+            if api_key:
+                params["api_key"] = api_key
+                params["cursor"] = cursor
+            else:
+                params["page"] = str(page)
             if mailto:
                 params["mailto"] = mailto
             response = client.get(OPENALEX_WORKS, params=params, headers=headers)
             response.raise_for_status()
             payload = response.json()
-            for item in payload.get("results") or []:
+            results = payload.get("results") or []
+            for item in results:
                 normalized = normalize_work(item)
                 if normalized is None or normalized["openalex_id"] in seen:
                     continue
@@ -131,9 +148,19 @@ def fetch_works(
                 works.append(normalized)
                 if len(works) >= fetch_cap:
                     return works, False
-            next_cursor = (payload.get("meta") or {}).get("next_cursor")
-            if not next_cursor or next_cursor == cursor:
-                break
-            cursor = next_cursor
+            meta = payload.get("meta") or {}
+            if api_key:
+                next_cursor = meta.get("next_cursor")
+                if not results or not next_cursor or next_cursor == cursor:
+                    break
+                cursor = next_cursor
+            else:
+                total = int(meta.get("count") or 0)
+                if not results or page * PAGE_SIZE >= total:
+                    break
+                if page * PAGE_SIZE >= NUMBERED_PAGE_LIMIT:
+                    complete = False
+                    break
+                page += 1
             time.sleep(0.1)
     return works, complete

@@ -1,6 +1,8 @@
 model = "~deepseek/deepseek-flash-latest"
-lookback_days = 7
+start_date = "2026-01-01"
+overlap_days = 14
 keep_threshold = 6
 max_papers = 200
+fetch_cap = 10000
 scimago_area = "3600"
 scimago_category = "3699"

@@ -8,16 +8,71 @@
 </head>
 <body>
   <header class="mast">
-    <p class="eyebrow">Sports science, Q1 and Q2</p>
     <h1>Literature</h1>
-    <p class="lede">Papers that might help a cycling team understand or improve performance, including physiology from similar endurance sports.</p>
-    <a class="notes-link" href="../index.html">Back to the notes</a>
+    <a id="notes-link" class="notes-link" href="../index.html">Back to the notes</a>
   </header>
   <div class="layout">
-    <form id="filters" class="filters">
+    <aside class="sidebar">
+    <section class="panel" aria-label="Fetching">
+      <h2>Fetch</h2>
+      <form id="backfill" class="backfill" hidden>
+        <label>
+          From
+          <input id="backfill-since" type="date" required>
+        </label>
+        <div class="fetch-actions">
+          <button id="fetch-start" type="submit">Fetch</button>
+          <button id="classify-start" type="button" disabled>Classify</button>
+        </div>
+        <p id="waiting" class="waiting"></p>
+      </form>
+      <p id="job" class="job" hidden></p>
+      <p id="published" class="published" hidden>
+        Marks made here stay in this browser until you export them. To classify more papers,
+        <a href="https://github.com/glemaitre/sport-science/actions/workflows/literature.yml" target="_blank" rel="noreferrer">run the literature workflow on GitHub</a>
+        and choose how many papers.
+      </p>
+      <div id="pending" class="pending" hidden>
+        <p id="pending-count"></p>
+        <button id="export" type="button">Export triage</button>
+        <button id="clear-pending" type="button">Clear these marks</button>
+      </div>
+      <div id="legacy" class="pending" hidden>
+        <p id="legacy-count"></p>
+        <button id="legacy-import" type="button">Import them</button>
+      </div>
+      <p id="backlog" class="backlog" hidden></p>
+      <button id="stats-toggle" class="more" type="button" aria-expanded="false" aria-controls="backlog">More</button>
+    </section>
+    <form id="filters" class="panel filters" aria-label="List">
+      <h2>List</h2>
       <label>
         Search
         <input id="search" type="search" autocomplete="off" placeholder="Title, author, journal, idea">
+      </label>
+      <label>
+        Job status
+        <select id="status">
+          <option value="of-interest" selected>Of interest</option>
+          <option value="discarded">Discarded</option>
+          <option value="unclassified">Unclassified</option>
+          <option value="">Any</option>
+        </select>
+      </label>
+      <label>
+        Your triage
+        <select id="triage">
+          <option value="">Any</option>
+          <option value="none">Not marked</option>
+          <option value="to-read">To read</option>
+          <option value="read">Read</option>
+          <option value="useful">Useful</option>
+          <option value="not-relevant">Not relevant</option>
+        </select>
+      </label>
+      <label class="check">
+        <input id="hide-done" type="checkbox">
+        Hide read and not relevant
       </label>
       <label>
         Kind
@@ -40,17 +95,9 @@
         <input id="latest" type="checkbox">
         Latest run
       </label>
-      <label class="check">
-        <input id="saved-only" type="checkbox">
-        Saved only
-      </label>
-      <label class="check">
-        <input id="hide-seen" type="checkbox">
-        Hide already seen
-      </label>
       <label>
-        <span>Minimum score <span id="score-value">6</span>/10</span>
-        <input id="score" type="range" min="0" max="10" step="1" value="6">
+        <span>Minimum score <span id="score-value">0</span>/10</span>
+        <input id="score" type="range" min="0" max="10" step="1" value="0">
       </label>
       <label>
         From
@@ -71,9 +118,12 @@
       </label>
       <button id="direction" type="button">Newest first</button>
     </form>
+    </aside>
     <main>
       <p id="count" class="count"></p>
+      <nav id="pager-top" class="pager" aria-label="Pages" hidden></nav>
       <div id="list"></div>
+      <nav id="pager-bottom" class="pager" aria-label="Pages" hidden></nav>
       <p id="empty" class="empty" hidden></p>
     </main>
   </div>

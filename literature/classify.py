@@ -1,3 +1,4 @@
+import hashlib
 import json
 import re
 import time
@@ -18,9 +19,13 @@ Physiology, including fuel use, is not limited to cycling. Keep a finding from r
 
 Drop surgery technique, sport management, match analysis, talent identification, coaching pedagogy, and rehab protocols that do not teach a performance mechanism. Drop intermittent team sports unless the finding is a mechanism that would transfer.
 
-Score relevance from 0 to 10. 0 is unrelated. 10 is a paper the team would use directly. 6 is the keep cutoff.
+Score relevance from 0 to 10. 6 is the keep cutoff.
+- 8 to 10: a direct finding on cycling performance: physiology, nutrition, biomechanics, aerodynamics, pacing, or testing in cyclists or on the bike.
+- 6 to 7: a finding in another continuous endurance sport, or a mechanism studied without a sport, that clearly transfers to endurance performance on the bike.
+- 5 or below: general exercise science with no endurance link. That includes resistance or strength training, body composition and weight loss, team sports such as football, rugby, or ice hockey, sport psychology and motivation, coaching, and general health or clinical populations. Score these 5 or below even when the physiology is sound.
+- 0: unrelated.
 
-kind is cycling when the subjects or the task are cycling, endurance when they do another continuous endurance sport, and physiology when the paper is about a mechanism and names no sport. Nutrition, biomechanics, and aerodynamics of cycling are kind cycling. Use an empty kind when the paper is unrelated.
+kind is cycling when the subjects or the task are cycling, endurance when they do another continuous endurance sport, and physiology when the paper is about a mechanism relevant to endurance performance and names no sport. Nutrition, biomechanics, and aerodynamics of cycling are kind cycling. Use an empty kind when the paper scores 5 or below.
 sport is the sport studied, or an empty string when there is no sport.
 why is one sentence on why the paper is here, or why it was dropped. Do not copy the abstract.
 
@@ -36,6 +41,24 @@ Return JSON only, as {{"papers": [{{"id", "learn"}}]}}. Use the ids you were giv
 
 Interest profile:
 {brief}"""
+
+
+def _version(*parts: str) -> str:
+    digest = hashlib.sha256("\n\x00\n".join(parts).encode("utf-8")).hexdigest()
+    return digest[:12]
+
+
+def read_brief() -> str:
+    return INTEREST_BRIEF.read_text(encoding="utf-8")
+
+
+def screen_version(model: str, brief: str | None = None) -> str:
+    return _version(SCREEN_SYSTEM, read_brief() if brief is None else brief, model)
+
+
+def note_version(model: str, brief: str | None = None) -> str:
+    text = read_brief() if brief is None else brief
+    return _version(note_system(text), text, model)
 
 
 def extract_json(text: str):
@@ -195,7 +218,7 @@ def screen_papers(client: httpx.Client, key: str, config: Config, rows) -> dict[
 
 
 def write_notes(client: httpx.Client, key: str, config: Config, rows) -> dict[str, dict]:
-    brief = INTEREST_BRIEF.read_text(encoding="utf-8")
+    brief = read_brief()
     papers = []
     for row in rows:
         item = paper_for_model(row, limit=2000)

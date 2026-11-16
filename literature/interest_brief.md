@@ -14,4 +14,10 @@ Biomechanics and aerodynamics count when the task is cycling, or when a method o
 
 Drop surgery technique, injury-rehab protocols that do not teach a performance mechanism, sport management, match analysis, talent identification, and coaching pedagogy. Drop intermittent team sports unless the finding is one of the mechanisms above. A device, a garment, or a supplement counts only when the measured outcome is performance or a mechanism the team would use.
 
+How to score, with 6 as the keep cutoff:
+
+- 8 to 10: a direct finding on cycling performance, in cyclists or on the bike.
+- 6 to 7: a finding in another continuous endurance sport, or a mechanism without a sport, that clearly transfers to endurance performance on the bike.
+- 5 or below: general exercise science with no endurance link, even when the physiology is sound. That includes resistance or strength training, body composition and weight loss, team sports such as football, rugby, or ice hockey, sport psychology and motivation, coaching, and general health or clinical populations.
+
 The learning note says what the paper claims and what the team could use. Do not copy the abstract. Do not invent a number that is not in the abstract. One paper does not change the notes.

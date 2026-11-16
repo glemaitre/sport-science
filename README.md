@@ -25,6 +25,9 @@ New papers from Q1 and Q2 Sports Science journals are collected in `literature/`
 ```bash
 pixi run literature-journals
 pixi run literature
+pixi run literature-app
 ```
 
-`literature-journals` downloads the SCImago Sports Science ranking and keeps the Q1 and Q2 journals. If SCImago answers with a browser check instead of the file, use the Download link on that ranking page and run `pixi run python -m literature journals --csv PATH`. `literature` asks OpenAlex for new articles and reviews, then asks the model which ones are worth reading. Copy `.env.example` to `.env` and set `OPENROUTER_API_KEY`. The model is in `literature/config.toml`. On GitHub, the same key is the Actions secret `OPENROUTER_API_KEY`. The job runs every day at 06:00 UTC, then the site is published again.
+`literature-journals` downloads the SCImago Sports Science ranking and keeps the Q1 and Q2 journals. If SCImago answers with a browser check instead of the file, use the Download link on that ranking page and run `pixi run python -m literature journals --csv PATH`. `literature` asks OpenAlex for articles and reviews published since 1 January 2026 (`start_date` in `literature/config.toml`), then asks the model which ones are worth reading, up to 200 a run. Each journal and date range is read once, and each paper goes to the model once. Copy `.env.example` to `.env` and set `OPENROUTER_API_KEY`. On GitHub, the same key is the Actions secret `OPENROUTER_API_KEY`. The job runs every day at 06:00 UTC, then the site is published again.
+
+`literature-app` serves the same page at [http://127.0.0.1:8766/](http://127.0.0.1:8766/), where you can mark papers (to read, read, useful, not relevant) and classify more of the waiting papers. `pixi run literature-backfill --papers 500` does the same from the terminal, and the workflow's manual run on GitHub takes the same numbers. The published page cannot write; it exports its marks as `triage.json` for `pixi run python -m literature triage triage.json`.
